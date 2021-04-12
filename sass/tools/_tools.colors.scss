@@ -1,0 +1,24 @@
+/// Returns the color value for a given color name
+/// 
+/// @param {String} $name - The color’s name (e.g. blue)
+/// @param {String} $tone - The color’s tone (see colors.amp for available options)
+/// @return {Color} The color value.
+
+@function color($map, $name, $tone){
+  $fetched-color: map-get(map-get($map, $name), $tone);
+
+  @if type-of($fetched-color) == color {
+    @return $fetched-color;
+  } @else {
+    // stylelint-disable string-no-newline
+    $error: "
+    Color `#{$name}, #{$tone}` not found. Make sure arguments are strings.
+    GOOD: color('yellow')
+    BAD: color(yellow)
+
+    Available options: #{available-names($colors)}
+    ";
+
+    @error $error;
+  }
+}

@@ -1,0 +1,14 @@
+/// Returns the spacing value for a given size.
+///
+/// @param {String} $variant - The key for the given size.
+/// @return {Number} The spacing value for the size.
+
+@function spacing($size){
+  $fetched-size: map-get($spacing, $size);
+
+  @if type-of($fetched-size) == number {
+    @return rem($fetched-size);
+  } @else {
+    @error 'Spacing variant `#{$size}` not found.';
+  }
+}
