@@ -1,0 +1,35 @@
+// Name:            Colors Tokens 
+// Description:     Global colors design tokens
+// ========================================================================
+
+// Palette colors
+// ========================================================================
+
+$color-white: color($global, white, base);
+$color-black: color($global, black, base);
+$color-gray: color($global, gray, base);
+$color-gray-light: color($global, gray, light);
+$color-gray-lighter: color($global, gray, lighter);
+$color-gray-dark: color($global, gray, dark);
+$color-gray-darker: color($global, gray, darker);
+$color-blue: color($global, blue, base);
+$color-green: color($global, green, base);
+$color-red: color($global, red, base);
+
+// Global color tokens
+// ========================================================================
+
+// Add here your global color tokens with higher specificity level in 
+// naming and organization. 
+//
+// Example:
+//
+// $ui-01: $color-white;
+// $ui-01-50: rgba($color-white, .5);
+// $ui-01-10: rgba($color-white, .1);
+// $ui-02: $color-black;
+// $ui-03: $color-gray;
+// $ui-04: $color-gray-light;
+// $ui-05: $color-gray-lighter;
+// $ui-06: $color-gray-dark;
+// $ui-07: $color-gray-darker;

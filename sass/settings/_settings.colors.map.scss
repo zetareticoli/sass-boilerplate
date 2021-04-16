@@ -1,0 +1,28 @@
+// Name:            Colors Palette 
+// Description:     Colors map with all colors from design palette
+// ========================================================================
+
+$global: (
+  white: (
+    base: #fff
+  ),
+  black: (
+    base:#000
+  ),
+  gray: (
+    base: #808080,
+    light: #d9d9d9,
+    lighter: #f3f3f3,
+    dark: #4d4d4d,
+    darker: #161616
+  ),
+  blue: (
+    base: #2f58b7
+  )
+  green: (
+    base: #00990a
+  ),
+  red: (
+    base: #b32424
+  )
+);  
