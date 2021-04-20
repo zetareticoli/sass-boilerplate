@@ -4,10 +4,12 @@
 @import "tools/utils";
 @import "tools/color";
 @import "tools/spacing";
+@import "tools/mq";
 
 // Settings
 // ========================================================================
 
+@import "settings/breakpoints";
 @import "settings/colors-map";
 @import "settings/colors-tokens";
 @import "settings/typography-tokens";
@@ -44,3 +46,26 @@
 // Trumps
 // ========================================================================
 
+@import "trumps/align";
+@import "trumps/animations";
+@import "trumps/borders";
+@import "trumps/colors";
+@import "trumps/cursor";
+@import "trumps/decoration";
+@import "trumps/display";
+@import "trumps/filters";
+@import "trumps/flexbox";
+@import "trumps/grid";
+@import "trumps/list";
+@import "trumps/overflow";
+@import "trumps/object-fit";
+@import "trumps/object-position";
+@import "trumps/opacity";
+@import "trumps/position";
+@import "trumps/sizes";
+@import "trumps/spacing";
+@import "trumps/states";
+@import "trumps/shadow";
+@import "trumps/truncate";
+@import "trumps/visibility";
+@import "trumps/zindex";
