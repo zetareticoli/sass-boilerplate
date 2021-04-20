@@ -1,0 +1,30 @@
+.is-rotate {
+  transform: rotate(180deg);
+}
+
+.is-visible {
+  display: block;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-locked {
+  height: 100%;
+  overflow: hidden !important;
+}
+
+.is-blinking {
+  animation-direction: alternate;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-name: blink;
+}
+
+.is-visible-from-tablet {
+  visibility: hidden;
+  @include bp(md) {
+    visibility: visible;
+  }
+}

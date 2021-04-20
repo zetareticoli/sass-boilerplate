@@ -1,0 +1,69 @@
+
+// Displays an element as an inline element (like <span>). Any height and width properties will have no effect	
+
+.u-inline {
+  display: inline;
+}
+
+// Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width	
+
+.u-block {
+  display: block;
+}
+
+// Makes the container disappear, making the child elements children of the element the next level up in the DOM	
+
+.u-contents {
+  display: contents;
+}
+
+// Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values	
+
+.u-inline-block {
+  display: inline-block;
+}
+
+// Displays an element as an inline-level flex container	
+
+.u-inline-flex {
+  display: inline-flex;
+}
+
+// Displays an element as an inline-level grid container	
+
+.u-inline-grid {
+  display: inline-grid;
+}
+
+// Let the element behave like a <li> element	
+
+.u-list-item {
+  display: list-item;
+}
+
+// The element is completely removed	  
+
+.u-none {
+  display: none;
+}
+
+@if $responsive-breakpoints {
+  
+  // Sets element block on media query	
+  @each $bp, $breakpoint in $breakpoints {
+    @include bp($bp) {
+      .u-block\@#{$bp} {
+        display: block;
+      }
+    }
+  }
+  
+  // Sets element invisibile on media query	
+  @each $bp, $breakpoint in $breakpoints {
+    @include bp($bp) {
+      .u-none\@#{$bp} {
+        display: none;
+      }
+    }
+  }
+}

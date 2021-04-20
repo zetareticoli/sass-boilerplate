@@ -1,0 +1,25 @@
+// Fluid sizes
+@each $size, $value in $sizes {
+  .u-size-#{$size} {
+    width: $value;
+  }
+}
+
+@if $responsive-breakpoints {
+
+  @each $bp, $breakpoint in $breakpoints {
+    @each $size, $value in $sizes {
+  
+      @include bp($bp) {
+        .u-size-#{$size}\@#{$bp} {
+          width: $value;
+        }
+      }
+    }
+  }
+  
+}
+
+.u-size-full-height {
+  height: 100%;
+}

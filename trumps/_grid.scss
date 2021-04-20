@@ -1,0 +1,57 @@
+.u-grid {
+  display: grid;
+}
+
+.u-gap-sm {
+  gap: $gutter-small !important;
+}
+
+.u-gap-md {
+  gap: $gutter-medium !important;
+}
+
+.u-gap-lg {
+  gap: $gutter-xlarge !important;
+}
+
+// tells the auto-placement algorithm to fill in each row in turn, adding new rows as necessary (default)
+
+.u-auto-flow-row {
+  grid-auto-flow: row;
+} 
+
+// tells the auto-placement algorithm to fill in each column in turn, adding new columns as necessary
+
+.u-auto-flow-column {
+  grid-auto-flow: column;
+} 
+
+// tells the auto-placement algorithm to attempt to fill in holes earlier in the grid if smaller items come up later
+
+.u-auto-flow-dense {
+  grid-auto-flow: dense;
+} 
+
+// aligns the grid item to be flush with the start edge of the cell
+
+.u-justify-self-start {
+  justify-self: start;
+}
+
+// aligns the grid item to be flush with the end edge of the cell
+
+.u-justify-self-end {
+  justify-self: end;
+}
+
+// aligns the grid item in the center of the cell
+
+.u-justify-self-center {
+  justify-self: center;
+}
+
+// fills the whole width of the cell (this is the default)
+
+.u-justify-self-stretch {
+  justify-self: stretch;
+}

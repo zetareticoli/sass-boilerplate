@@ -1,0 +1,225 @@
+// Flex Container
+
+.u-flex	{
+  display: flex;
+}
+
+@each $bp, $breakpoint in $breakpoints {
+  @include bp($bp) {
+    .u-flex\@#{$bp} {
+      display: flex;
+    }
+  }
+}
+
+// Flex Direction
+
+@if $responsive-breakpoints {
+ 
+  // Default value. The flexible items are displayed horizontally, as a row	
+  @each $bp, $breakpoint in $breakpoints {
+    @include bp($bp) {
+      .u-row\@#{$bp} {
+        flex-direction: row !important;
+      }
+    }
+  }
+
+}
+
+.u-row	{
+  flex-direction: row;
+}
+
+// Same as row, but in reverse order	
+
+.u-row-reverse	{
+  flex-direction: row-reverse;
+}
+
+// The flexible items are displayed vertically, as a column	
+
+.u-column	{
+  flex-direction: column;
+}
+
+@if $responsive-breakpoints {
+  @each $bp, $breakpoint in $breakpoints {
+    @include bp($bp) {
+      .u-column\@#{$bp} {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// Same as column, but in reverse order	
+
+.u-column-reverse	{
+  flex-direction: column-reverse;
+}
+
+// Flex Wrap
+
+// Default value. Specifies that the flexible items will not wrap	
+
+.u-nowrap {
+  flex-wrap: nowrap;
+}
+
+// Specifies that the flexible items will wrap if necessary	
+
+.u-wrap {
+  flex-wrap: wrap;
+}
+
+// Specifies that the flexible items will wrap, if necessary, in reverse order	
+
+.u-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.u-wrap-row {
+  flex: 1 1 auto;
+}
+
+// Justify Content
+
+// (default): items are packed toward the start line
+
+.u-justify-start {
+  justify-content: flex-start;
+}
+
+// items are packed toward to end line
+
+.u-justify-end {
+  justify-content: flex-end;
+}
+
+// items are centered along the line
+
+.u-justify-center {
+  justify-content: center;
+}
+
+// items are evenly distributed in the line; first item is on the start line, last item on the end line
+
+.u-justify-between {
+  justify-content: space-between;
+}
+
+// items are evenly distributed in the line with equal space around them
+
+.u-justify-around {
+  justify-content: space-around;
+}
+
+// items are distributed so that the spacing between any two adjacent alignment subjects, before the first alignment subject, and after the last alignment subject is the same
+
+.u-justify-evenly {
+  justify-content: space-evenly;
+}
+
+// Align Items
+
+// The cross-start margin edges of the flex items are flushed with the cross-start edge of the line.
+
+.u-items-start {
+  align-items: flex-start;
+}
+
+@if $responsive-breakpoints {
+  @each $bp, $breakpoint in $breakpoints {
+    @include bp($bp) {
+      .u-items-start\@#{$bp} {
+        align-items: start !important;
+      }
+    }
+  }
+}
+
+// The cross-end margin edges of the flex items are flushed with the cross-end edge of the line.
+
+.u-items-end {
+  align-items: flex-end;
+}
+
+// The flex items' margin boxes are centered within the line on the cross-axis. If the cross-size of an item is larger than the flex container, it will overflow equally in both directions.
+
+.u-items-center {
+  align-items: center;
+}
+
+@if $responsive-breakpoints {
+  @each $bp, $breakpoint in $breakpoints {
+    @include bp($bp) {
+      .u-items-center\@#{$bp} {
+        align-items: center !important;
+      }
+    }
+  } 
+}
+
+// Flex items are stretched such that the cross-size of the item's margin box is the same as the line while respecting width and height constraints.
+
+.u-items-stretch {
+  align-items: stretch;
+}
+
+// Align Content
+
+// lines packed to the start of the container
+
+.u-content-start {
+  align-content: flex-start;
+}
+// lines packed to the end of the container
+
+.u-content-end {
+  align-content: flex-end;
+}
+// lines packed to the center of the container
+
+.u-content-center {
+  align-content: center;
+}
+// lines evenly distributed; the first line is at the start of the container while the last one is at the end
+
+.u-content-between {
+  align-content: space-between;
+}
+// lines evenly distributed with equal space between them
+
+.u-content-around {
+  align-content: space-around;
+}
+
+// (default): lines stretch to take up the remaining space
+
+.u-content-stretch {
+  align-content: stretch;
+}
+
+// Align Self
+
+// aligns the grid item to be flush with the start edge of the cell
+
+.u-self-start {
+  align-self: start;
+}
+// aligns the grid item to be flush with the end edge of the cell
+
+.u-self-end {
+  align-self: end;
+}
+// aligns the grid item in the center of the cell
+
+.u-self-center {
+  align-self: center;
+}
+// fills the whole height of the cell (this is the default)
+
+.u-self-stretch {
+  align-self: stretch;
+}

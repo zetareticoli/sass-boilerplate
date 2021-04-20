@@ -1,0 +1,57 @@
+// Global side spacing
+
+@each $area in $areas {
+  @each $space, $size in $spacing {
+    .u-#{str-slice($area, 0, 1)}-#{$space} {
+      #{$area}: rem($size);
+    }
+    @if $responsive-breakpoints {
+      // Responsive global spacing classes
+      @each $bp, $breakpoint in $breakpoints {
+        @include bp($bp){
+          .u-#{str-slice($area, 0, 1)}-#{$space}\@#{$bp} {
+            #{$area}: rem($size);
+          }
+        }
+      }
+    }
+
+    // Single side spacing
+    @each $side in $sides {
+      .u-#{str-slice($area, 0, 1)}#{str-slice($side, 0, 1)}-#{$space} {
+        #{$area}-#{$side}: rem($size);
+      }
+      @if $responsive-breakpoints {
+        // Responsive single-side spacing classes
+        @each $bp, $breakpoint in $breakpoints {
+          @include bp($bp){
+            .u-#{str-slice($area, 0, 1)}#{str-slice($side, 0, 1)}-#{$space}\@#{$bp} {
+              #{$area}-#{$side}: rem($size);
+            }
+          }
+        }
+      }
+    }
+    
+    // Horizontal and vertical sides spacing
+    .u-#{str-slice($area, 0, 1)}x-#{$space} {
+      #{$area}-left: rem($size);
+      #{$area}-right: rem($size);
+    }
+
+    .u-#{str-slice($area, 0, 1)}y-#{$space} {
+      #{$area}-bottom: rem($size);
+      #{$area}-top: rem($size);
+    }
+  }
+}
+
+// Auto spacing for flexbox use only
+
+.u-mr-auto {
+  margin-right: auto;
+}
+
+.u-ml-auto {
+  margin-left: auto;
+}

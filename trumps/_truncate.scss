@@ -1,0 +1,22 @@
+.u-truncate {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.u-truncate-1 {
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+
+.u-truncate-2 {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.u-truncate-3 {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
