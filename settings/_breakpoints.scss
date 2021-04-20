@@ -1,0 +1,10 @@
+/// Breakpoints list
+/// Name your breakpoints in a way that communicates devices sizes
+
+$breakpoints: (
+  'sm': 600px,    // large phones and tablets portrait
+  'md': 740px,    // tablet portrait
+  'lg': 992px,    // tablet landscape and small laptops
+  'xl': 1280px,   // commom laptops
+  'xxl': 1440px   // commond and large desktops
+);
