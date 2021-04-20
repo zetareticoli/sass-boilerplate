@@ -5,7 +5,7 @@
     .u-#{str-slice($area, 0, 1)}-#{$space} {
       #{$area}: rem($size);
     }
-    @if $responsive-breakpoints {
+    @if $responsive {
       // Responsive global spacing classes
       @each $bp, $breakpoint in $breakpoints {
         @include bp($bp){
@@ -21,7 +21,7 @@
       .u-#{str-slice($area, 0, 1)}#{str-slice($side, 0, 1)}-#{$space} {
         #{$area}-#{$side}: rem($size);
       }
-      @if $responsive-breakpoints {
+      @if $responsive {
         // Responsive single-side spacing classes
         @each $bp, $breakpoint in $breakpoints {
           @include bp($bp){

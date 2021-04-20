@@ -1,3 +1,9 @@
+// Enviroment variables
+// ========================================================================
+
+$responsive: true;
+$base-font-size: 16px;
+
 // Tools
 // ========================================================================
 
@@ -12,6 +18,9 @@
 @import "settings/breakpoints";
 @import "settings/colors-map";
 @import "settings/colors-tokens";
+@import "settings/layers";
+@import "settings/sizes";
+@import "settings/spacing";
 @import "settings/typography-tokens";
 
 // Elements

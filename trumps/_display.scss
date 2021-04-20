@@ -47,7 +47,7 @@
   display: none;
 }
 
-@if $responsive-breakpoints {
+@if $responsive {
   
   // Sets element block on media query	
   @each $bp, $breakpoint in $breakpoints {

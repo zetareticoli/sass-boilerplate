@@ -5,7 +5,7 @@
   }
 }
 
-@if $responsive-breakpoints {
+@if $responsive {
 
   @each $bp, $breakpoint in $breakpoints {
     @each $size, $value in $sizes {

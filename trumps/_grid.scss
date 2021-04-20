@@ -2,18 +2,6 @@
   display: grid;
 }
 
-.u-gap-sm {
-  gap: $gutter-small !important;
-}
-
-.u-gap-md {
-  gap: $gutter-medium !important;
-}
-
-.u-gap-lg {
-  gap: $gutter-xlarge !important;
-}
-
 // tells the auto-placement algorithm to fill in each row in turn, adding new rows as necessary (default)
 
 .u-auto-flow-row {

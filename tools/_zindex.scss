@@ -1,0 +1,14 @@
+/// Returns the value of z-index level.
+/// @param {String} $layer - The layer name to be converted.
+/// @return {Number} The converted z-index value.
+
+@function zindex($layer) {
+  @if not map-has-key($layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $layers map. Property omitted.";
+  }
+  @return map-get($layers, $layer);
+}
+
+@mixin z($layer) {
+  z-index: zindex($layer);
+}

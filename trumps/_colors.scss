@@ -1,23 +1,23 @@
 .u-color-base {
-  color: var(--body-color);
+  color: $color-black;
 }
 
 .u-color-secondary {
-  color: var(--body-secondary-color);
+  color: $color-gray;
 }
 
 .u-color-inverse {
-  color: $inverse-01;
+  color: $color-white;
 }
 
 .u-color-light {
-  color: $text-02;
+  color: $color-gray-light;
 }
 
 .u-color-error {
-  color: $error-01;
+  color: $color-red;
 }
 
 .u-color-success {
-  color: $success-01;
+  color: $color-green;
 }
